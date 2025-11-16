@@ -77,7 +77,7 @@ public final class Config {
             "spire": ["strength"],
             "wayfinder": ["slow_falling"],
             "shaper": ["luck"],
-            "silence": ["health_boost"],
+            "silence": ["health_boost" , "strength" , "resistance" , "speed" , "haste"],
             "raiser": ["saturation"],
             "host": ["glowing"],
             "flow": ["jump_boost"],
@@ -86,8 +86,8 @@ public final class Config {
 
           // Controls potion effect level based on number of matching armor pieces
           // Format: [1 piece, 2 pieces, 3 pieces, 4 pieces]
-          // Default: No effect for 1-2 pieces, level 1 for 3 pieces, level 2 for 4 pieces
-          "matchingEffectLevels": [0, 0, 1, 2],
+          // Default: Level 1 for 1 piece, level 2 for 2 pieces
+          "matchingEffectLevels": [1, 2, 2, 2],
 
           // Legacy v1 feature: Override potion effect levels based on trim material
           // Note: The "minecraft:" prefix is omitted from material names
@@ -112,7 +112,7 @@ public final class Config {
 
           // Legacy v1 feature: Minimum number of matching armor pieces required before an
           // effect is applied when using "materialEffectLevels"
-          "materialEffectLevelsMinimumMatching": 4,
+          "materialEffectLevelsMinimumMatching": 2,
 
           // Override potion effects based on trim material instead of pattern
           // Note: The "minecraft:" prefix is omitted from material and effect names
